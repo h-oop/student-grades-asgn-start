@@ -5,6 +5,7 @@ let containerEl = document.getElementById("container");
 let outputEl = document.getElementById("output");
 let goBtnEl = document.getElementById("go");
 let menuEl = document.getElementById("menu");
+let numOfel = document.getElementById("num");
 
 // Global Variable
 let grades = [60, 70, 80, 65, 90, 83];
@@ -64,23 +65,32 @@ function lastTo50() {
 function randomTo100() {
   // Set the grade of a random student to 100.
   outputEl.innerHTML = "Random grade to 100";
-  randGrade = Math.floor(Math.random() * grades.length);
-  grades[randGrade] = 100;
+  randScore = Math.floor(Math.random() * grades.length);
+  grades[randScore] = 100;
 }
 
 function addRandomGrade() {
   // Add a random grade between 0 and 100 to the end of the array.
   outputEl.innerHTML = "Add random grade";
+  randGrade = Math.floor(Math.random() * 100);
+  grades.push(randGrade);
 }
 
 function removeLastGrade() {
   // Remove the last grade.
   outputEl.innerHTML = "Remove the last grade";
+  grades.pop();
 }
 
 function countBelow50() {
   // Count how many grades are below 50.  Output the result.
   outputEl.innerHTML = "Count grades below 50";
+  for (let i = 0; i < grades.length; i++) {
+    if (grades[i] < 50) {
+      totalNum++;
+    }
+  }
+  numOfel = totalNum.value;
 }
 
 function lowGradesTo50() {
