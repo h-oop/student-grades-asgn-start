@@ -102,13 +102,16 @@ function lowGradesTo50() {
     if (grades[i] < 50) {
       grades[i] = 50;
     }
-    console.log(i);
+    //console.log(i);
   }
 }
 
 function increaseGradesBy10() {
   // Increase each grade by 10%.
   outputEl.innerHTML = "Increase all grades by 10%";
+  for (let i = 0; i < grades.length; i++) {
+    grades[i].value + 10;
+  }
 }
 
 function decreaseGradesBy10() {
