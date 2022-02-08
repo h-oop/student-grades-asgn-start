@@ -82,24 +82,28 @@ function removeLastGrade() {
   grades.pop();
 }
 
-let totalNum = 0;
+
 
 function countBelow50() {
   // Count how many grades are below 50.  Output the result.
-  outputEl.innerHTML = "Count grades below 50";
-
+  let totalNum = 0;
   for (let i = 0; i < grades.length; i++) {
     if (grades[i] < 50) {
       totalNum++;
-      console.log(totalNum.value);
     }
   }
-  numOfel = totalNum.value;
+  outputEl.innerHTML = totalNum;
 }
 
 function lowGradesTo50() {
   // Change all grades that are below 50 to be equal to 50.
   outputEl.innerHTML = "Change low grades to 50";
+  for (let i = 0; i < grades.length; i++) {
+    if (grades[i] < 50) {
+      grades.splice(0, 1, 50);
+    }
+    console.log(grades[i]);
+  }
 }
 
 function increaseGradesBy10() {
