@@ -82,12 +82,16 @@ function removeLastGrade() {
   grades.pop();
 }
 
+let totalNum = 0;
+
 function countBelow50() {
   // Count how many grades are below 50.  Output the result.
   outputEl.innerHTML = "Count grades below 50";
+
   for (let i = 0; i < grades.length; i++) {
     if (grades[i] < 50) {
       totalNum++;
+      console.log(totalNum.value);
     }
   }
   numOfel = totalNum.value;
