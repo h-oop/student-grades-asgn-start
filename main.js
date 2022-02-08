@@ -100,9 +100,9 @@ function lowGradesTo50() {
   outputEl.innerHTML = "Change low grades to 50";
   for (let i = 0; i < grades.length; i++) {
     if (grades[i] < 50) {
-      grades.splice(0, 1, 50);
+      grades[i] = 50;
     }
-    console.log(grades[i]);
+    console.log(i);
   }
 }
 
